@@ -65,13 +65,13 @@ ggplot(dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 #### Plot for uber pickups
 
 ```{r}
-ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/10)) +
+ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
   theme_minimal() +
   xlim(c(-74.259,-73.700)) +
   ylim(c(40.477,40.917)) +
   xlab("longitude") +
   ylab("lattitude") +
-  geom_point(size = 0.5) +
+  geom_point(size = 0.01) +
   labs(alpha = "Freqency") +
   ggtitle("Uber Pickup Locations")
 ```
@@ -106,7 +106,7 @@ ggplot(rush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
   ylim(c(40.477,40.917)) +
   xlab("longitude") +
   ylab("lattitude") +
-  geom_point(size = 0.05) +
+  geom_point(size = 0.01) +
   labs(color="Taxi Type", alpha = "Frequency") +
   ggtitle("Green and Yellow Cab Rush Hour Dropoff Locations")
 ```
@@ -114,13 +114,13 @@ ggplot(rush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 #### Rush Hour Uber
 
 ```{r}
-ggplot(rush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/10)) +
+ggplot(rush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/20)) +
   theme_minimal() +
   xlim(c(-74.259,-73.700)) +
   ylim(c(40.477,40.917)) +
   xlab("longitude") +
   ylab("lattitude") +
-  geom_point(size = 0.5) +
+  geom_point(size = 0.01) +
   labs(alpha = "Freqency") +
   ggtitle("Rush hour Uber Pickup Locations")
 ```
@@ -161,13 +161,13 @@ ggplot(nonrush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 #### Non-rush Hour Uber
 
 ```{r}
-ggplot(nonrush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/10)) +
+ggplot(nonrush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/20)) +
   theme_minimal() +
   xlim(c(-74.259,-73.700)) +
   ylim(c(40.477,40.917)) +
   xlab("longitude") +
   ylab("lattitude") +
-  geom_point(size = 0.5) +
+  geom_point(size = 0.01) +
   labs(alpha = "Freqency") +
   ggtitle("Non rush hour Uber Pickup Locations")
 ```
