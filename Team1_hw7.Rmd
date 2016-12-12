@@ -23,7 +23,7 @@ library(tidyr)
 <Write-up>
 
 ```{r}
-file = "summary.RData"
+file = "taxi_and_uber.RData"
 if (!file.exists(file)) {
   source("sparklyr.R")
 }
@@ -34,7 +34,7 @@ load(file = file)
 
 ```{r}
 ggplot(pickup,aes(x = pickup_longitude,y = pickup_latitude,
-                  group = group,color = pickup$group,alpha = log(n)/10)) +
+                  color = group,alpha = log(n)/10)) +
   scale_colour_manual(values=c("#009E73","#F0E442")) +
   theme_minimal() +
   xlim(c(-74.259,-73.700)) +

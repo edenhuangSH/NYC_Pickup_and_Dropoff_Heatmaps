@@ -157,20 +157,18 @@ nonrush_green_dropoff = green %>%
 nonrush_dropoff = rbind(nonrush_yellow_dropoff,nonrush_green_dropoff)
 nonrush_dropoff$group = c(rep("yellow",nrow(nonrush_yellow_dropoff)),rep("green",nrow(nonrush_green_dropoff)))
 
-# Need to be fixed
-# ## Rush hour ubers
-# rush_uber = uber %>%
-#   mutate(Hour = hour(DateTime)) %>%
-#   mutate(if_rush_hour = (Hour >= 7 & Hour <= 10)) %>%
-#   filter(if_rush_hour == T) %>%
-#   uber_raster()
-# ## Non-rush hour ubers
-# nonrush_uber = uber %>%
-#   mutate(Hour = hour(DateTime)) %>%
-#   mutate(if_rush_hour = (Hour >= 7 & Hour <= 10)) %>%
-#   filter(if_rush_hour == F) %>%
-#   uber_raster()
+## Rush hour ubers
+mutate_uber = uber %>% 
+  mutate(Hour = regexp_extract(DateTime,"([0-9]+):([0-9]+)",1)) %>%
+  mutate(if_rush_hour = (Hour >= 7 & Hour <= 10))
+rush_uber =  mutate_uber %>%
+  filter(if_rush_hour == T) %>%
+  uber_raster()
+## Non-rush hour ubers
+nonrush_uber = mutate_uber %>%
+  filter(if_rush_hour == F) %>%
+  uber_raster()
 
 ## Write the data frames into RData file
 save(pickup,dropoff,uber_pickup,rush_pickup,rush_dropoff,rush_uber,non_rush_pickup,nonrush_dropoff,nonrush_uber,
-     file = "summary.Rdata")
+     file = "taxi_and_uber.Rdata")
