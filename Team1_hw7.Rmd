@@ -1,0 +1,131 @@
+---
+title: "Team1_HW7"
+author: "Shaoji Li"
+date: "12/10/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages
+
+```{r}
+library(sparklyr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+## Task 1
+
+<Write-up>
+
+```{r}
+file = "summary.RData"
+if (!file.exists(file)) {
+  source("sparklyr.R")
+}
+load(file = file)
+```
+
+#### Plot for pickup
+
+```{r}
+ggplot(pickup,aes(x = pickup_longitude,y = pickup_latitude,
+                  group = group,color = pickup$group,alpha = log(n)/10)) +
+  scale_colour_manual(values=c("#009E73","#F0E442")) +
+  theme_minimal() +
+  xlim(c(-74.259,-73.700)) +
+  ylim(c(40.477,40.917)) +
+  xlab("longitude") +
+  ylab("lattitude") +
+  geom_point(size = 0.5) +
+  labs(color="Taxi Type", alpha = "Frequency") +
+  ggtitle("Green and Yellow Cab Pickup Locations")
+```
+
+#### Plot for dropoff
+
+```{r}
+ggplot(dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
+                  group = group,color = dropoff$group,alpha = log(n)/10)) +
+  scale_colour_manual(values=c("#009E73","#F0E442")) +
+  theme_minimal() +
+  xlim(c(-74.259,-73.700)) +
+  ylim(c(40.477,40.917)) +
+  xlab("longitude") +
+  ylab("lattitude") +
+  geom_point(size = 0.5) +
+  labs(color="Taxi Type", alpha = "Frequency") +
+  ggtitle("Green and Yellow Cab Dropoff Locations")
+```
+
+#### Plot for uber pickups
+
+```{r}
+ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/10)) +
+  theme_minimal() +
+  xlim(c(-74.259,-73.700)) +
+  ylim(c(40.477,40.917)) +
+  xlab("longitude") +
+  ylab("lattitude") +
+  geom_point(size = 0.5) +
+  labs(alpha = "Freqency") +
+  ggtitle("Uber Pickup Locations")
+```
+
+## Task 2
+
+#### Rush Hour Taxi Pickup
+
+```{r}
+
+```
+
+
+#### Rush Hour Taxi Dropoff
+
+```{r}
+ggplot(rush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
+                   group = group,color = dropoff$group,alpha = log(n)/10)) +
+  scale_colour_manual(values=c("#009E73","#F0E442")) +
+  theme_minimal() +
+  xlim(c(-74.259,-73.700)) +
+  ylim(c(40.477,40.917)) +
+  xlab("longitude") +
+  ylab("lattitude") +
+  geom_point(size = 0.5) +
+  labs(color="Taxi Type", alpha = "Frequency") +
+  ggtitle("Green and Yellow Cab Rush Hour Dropoff Locations")
+```
+
+#### Rush Hour Uber
+
+```{r}
+
+```
+
+
+#### Non-rush Hour Taxi Pickup
+
+```{r}
+
+```
+
+#### Non-rush Hour Taxi Dropoff
+
+```{r}
+
+```
+
+#### Non-rush Hour Uber
+
+```{r}
+
+```
+
+
+
+
