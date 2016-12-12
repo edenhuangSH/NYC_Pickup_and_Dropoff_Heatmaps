@@ -10275,3 +10275,118 @@ WHERE (0 = 1)
 16/12/12 05:38:29 INFO BlockManagerInfo: Removed broadcast_132_piece0 on 127.0.0.1:18476 in memory (size: 3.7 KB, free: 2.6 GB)
 16/12/12 05:38:29 INFO ContextCleaner: Cleaned accumulator 32108
 16/12/12 05:38:29 INFO BlockManagerInfo: Removed broadcast_131_piece0 on 127.0.0.1:18476 in memory (size: 15.3 KB, free: 2.6 GB)
+16/12/12 05:38:33 INFO Executor: Finished task 0.0 in stage 120.0 (TID 1324). 1305 bytes result sent to driver
+16/12/12 05:38:33 INFO TaskSetManager: Starting task 4.0 in stage 120.0 (TID 1328, localhost, partition 4, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:33 INFO Executor: Running task 4.0 in stage 120.0 (TID 1328)
+16/12/12 05:38:33 INFO TaskSetManager: Finished task 0.0 in stage 120.0 (TID 1324) in 5003 ms on localhost (1/70)
+16/12/12 05:38:33 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:134217728+33554432
+16/12/12 05:38:33 INFO Executor: Finished task 1.0 in stage 120.0 (TID 1325). 1305 bytes result sent to driver
+16/12/12 05:38:33 INFO TaskSetManager: Starting task 5.0 in stage 120.0 (TID 1329, localhost, partition 5, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:33 INFO Executor: Running task 5.0 in stage 120.0 (TID 1329)
+16/12/12 05:38:33 INFO TaskSetManager: Finished task 1.0 in stage 120.0 (TID 1325) in 5008 ms on localhost (2/70)
+16/12/12 05:38:33 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:167772160+33554432
+16/12/12 05:38:33 INFO Executor: Finished task 3.0 in stage 120.0 (TID 1327). 1305 bytes result sent to driver
+16/12/12 05:38:33 INFO TaskSetManager: Starting task 6.0 in stage 120.0 (TID 1330, localhost, partition 6, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:33 INFO Executor: Running task 6.0 in stage 120.0 (TID 1330)
+16/12/12 05:38:33 INFO TaskSetManager: Finished task 3.0 in stage 120.0 (TID 1327) in 5011 ms on localhost (3/70)
+16/12/12 05:38:33 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:201326592+33554432
+16/12/12 05:38:33 INFO Executor: Finished task 2.0 in stage 120.0 (TID 1326). 1305 bytes result sent to driver
+16/12/12 05:38:33 INFO TaskSetManager: Starting task 7.0 in stage 120.0 (TID 1331, localhost, partition 7, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:33 INFO Executor: Running task 7.0 in stage 120.0 (TID 1331)
+16/12/12 05:38:33 INFO TaskSetManager: Finished task 2.0 in stage 120.0 (TID 1326) in 5048 ms on localhost (4/70)
+16/12/12 05:38:33 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:234881024+33554432
+16/12/12 05:38:38 INFO Executor: Finished task 5.0 in stage 120.0 (TID 1329). 1305 bytes result sent to driver
+16/12/12 05:38:38 INFO TaskSetManager: Starting task 8.0 in stage 120.0 (TID 1332, localhost, partition 8, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:38 INFO Executor: Running task 8.0 in stage 120.0 (TID 1332)
+16/12/12 05:38:38 INFO TaskSetManager: Finished task 5.0 in stage 120.0 (TID 1329) in 4666 ms on localhost (5/70)
+16/12/12 05:38:38 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:268435456+33554432
+16/12/12 05:38:38 INFO Executor: Finished task 6.0 in stage 120.0 (TID 1330). 1305 bytes result sent to driver
+16/12/12 05:38:38 INFO TaskSetManager: Starting task 9.0 in stage 120.0 (TID 1333, localhost, partition 9, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:38 INFO Executor: Running task 9.0 in stage 120.0 (TID 1333)
+16/12/12 05:38:38 INFO TaskSetManager: Finished task 6.0 in stage 120.0 (TID 1330) in 4729 ms on localhost (6/70)
+16/12/12 05:38:38 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:301989888+33554432
+16/12/12 05:38:38 INFO Executor: Finished task 4.0 in stage 120.0 (TID 1328). 1305 bytes result sent to driver
+16/12/12 05:38:38 INFO TaskSetManager: Starting task 10.0 in stage 120.0 (TID 1334, localhost, partition 10, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:38 INFO Executor: Running task 10.0 in stage 120.0 (TID 1334)
+16/12/12 05:38:38 INFO TaskSetManager: Finished task 4.0 in stage 120.0 (TID 1328) in 4904 ms on localhost (7/70)
+16/12/12 05:38:38 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:335544320+33554432
+16/12/12 05:38:38 INFO Executor: Finished task 7.0 in stage 120.0 (TID 1331). 1305 bytes result sent to driver
+16/12/12 05:38:38 INFO TaskSetManager: Starting task 11.0 in stage 120.0 (TID 1335, localhost, partition 11, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:38 INFO Executor: Running task 11.0 in stage 120.0 (TID 1335)
+16/12/12 05:38:38 INFO TaskSetManager: Finished task 7.0 in stage 120.0 (TID 1331) in 4923 ms on localhost (8/70)
+16/12/12 05:38:38 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:369098752+33554432
+16/12/12 05:38:43 INFO Executor: Finished task 9.0 in stage 120.0 (TID 1333). 1305 bytes result sent to driver
+16/12/12 05:38:43 INFO TaskSetManager: Starting task 12.0 in stage 120.0 (TID 1336, localhost, partition 12, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:43 INFO Executor: Running task 12.0 in stage 120.0 (TID 1336)
+16/12/12 05:38:43 INFO TaskSetManager: Finished task 9.0 in stage 120.0 (TID 1333) in 4661 ms on localhost (9/70)
+16/12/12 05:38:43 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:402653184+33554432
+16/12/12 05:38:43 INFO Executor: Finished task 8.0 in stage 120.0 (TID 1332). 1305 bytes result sent to driver
+16/12/12 05:38:43 INFO TaskSetManager: Starting task 13.0 in stage 120.0 (TID 1337, localhost, partition 13, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:43 INFO Executor: Running task 13.0 in stage 120.0 (TID 1337)
+16/12/12 05:38:43 INFO TaskSetManager: Finished task 8.0 in stage 120.0 (TID 1332) in 4832 ms on localhost (10/70)
+16/12/12 05:38:43 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:436207616+33554432
+16/12/12 05:38:43 INFO Executor: Finished task 11.0 in stage 120.0 (TID 1335). 1305 bytes result sent to driver
+16/12/12 05:38:43 INFO TaskSetManager: Starting task 14.0 in stage 120.0 (TID 1338, localhost, partition 14, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:43 INFO Executor: Running task 14.0 in stage 120.0 (TID 1338)
+16/12/12 05:38:43 INFO TaskSetManager: Finished task 11.0 in stage 120.0 (TID 1335) in 4799 ms on localhost (11/70)
+16/12/12 05:38:43 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:469762048+33554432
+16/12/12 05:38:43 INFO Executor: Finished task 10.0 in stage 120.0 (TID 1334). 1305 bytes result sent to driver
+16/12/12 05:38:43 INFO TaskSetManager: Starting task 15.0 in stage 120.0 (TID 1339, localhost, partition 15, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:43 INFO Executor: Running task 15.0 in stage 120.0 (TID 1339)
+16/12/12 05:38:43 INFO TaskSetManager: Finished task 10.0 in stage 120.0 (TID 1334) in 4986 ms on localhost (12/70)
+16/12/12 05:38:43 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:503316480+33554432
+16/12/12 05:38:48 INFO Executor: Finished task 13.0 in stage 120.0 (TID 1337). 1305 bytes result sent to driver
+16/12/12 05:38:48 INFO TaskSetManager: Starting task 16.0 in stage 120.0 (TID 1340, localhost, partition 16, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:48 INFO Executor: Running task 16.0 in stage 120.0 (TID 1340)
+16/12/12 05:38:48 INFO TaskSetManager: Finished task 13.0 in stage 120.0 (TID 1337) in 4671 ms on localhost (13/70)
+16/12/12 05:38:48 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:536870912+33554432
+16/12/12 05:38:48 INFO Executor: Finished task 12.0 in stage 120.0 (TID 1336). 1305 bytes result sent to driver
+16/12/12 05:38:48 INFO TaskSetManager: Starting task 17.0 in stage 120.0 (TID 1341, localhost, partition 17, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:48 INFO Executor: Running task 17.0 in stage 120.0 (TID 1341)
+16/12/12 05:38:48 INFO TaskSetManager: Finished task 12.0 in stage 120.0 (TID 1336) in 4944 ms on localhost (14/70)
+16/12/12 05:38:48 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:570425344+33554432
+16/12/12 05:38:48 INFO Executor: Finished task 14.0 in stage 120.0 (TID 1338). 1305 bytes result sent to driver
+16/12/12 05:38:48 INFO TaskSetManager: Starting task 18.0 in stage 120.0 (TID 1342, localhost, partition 18, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:48 INFO Executor: Running task 18.0 in stage 120.0 (TID 1342)
+16/12/12 05:38:48 INFO TaskSetManager: Finished task 14.0 in stage 120.0 (TID 1338) in 4727 ms on localhost (15/70)
+16/12/12 05:38:48 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:603979776+33554432
+16/12/12 05:38:48 INFO Executor: Finished task 15.0 in stage 120.0 (TID 1339). 1305 bytes result sent to driver
+16/12/12 05:38:48 INFO TaskSetManager: Starting task 19.0 in stage 120.0 (TID 1343, localhost, partition 19, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:48 INFO Executor: Running task 19.0 in stage 120.0 (TID 1343)
+16/12/12 05:38:48 INFO TaskSetManager: Finished task 15.0 in stage 120.0 (TID 1339) in 4883 ms on localhost (16/70)
+16/12/12 05:38:48 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:637534208+33554432
+16/12/12 05:38:52 INFO Executor: Finished task 16.0 in stage 120.0 (TID 1340). 1392 bytes result sent to driver
+16/12/12 05:38:52 INFO TaskSetManager: Starting task 20.0 in stage 120.0 (TID 1344, localhost, partition 20, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:52 INFO Executor: Running task 20.0 in stage 120.0 (TID 1344)
+16/12/12 05:38:52 INFO TaskSetManager: Finished task 16.0 in stage 120.0 (TID 1340) in 4743 ms on localhost (17/70)
+16/12/12 05:38:52 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:671088640+33554432
+16/12/12 05:38:53 INFO Executor: Finished task 18.0 in stage 120.0 (TID 1342). 1305 bytes result sent to driver
+16/12/12 05:38:53 INFO TaskSetManager: Starting task 21.0 in stage 120.0 (TID 1345, localhost, partition 21, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:53 INFO Executor: Running task 21.0 in stage 120.0 (TID 1345)
+16/12/12 05:38:53 INFO TaskSetManager: Finished task 18.0 in stage 120.0 (TID 1342) in 4687 ms on localhost (18/70)
+16/12/12 05:38:53 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:704643072+33554432
+16/12/12 05:38:53 INFO Executor: Finished task 17.0 in stage 120.0 (TID 1341). 1305 bytes result sent to driver
+16/12/12 05:38:53 INFO TaskSetManager: Starting task 22.0 in stage 120.0 (TID 1346, localhost, partition 22, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:53 INFO Executor: Running task 22.0 in stage 120.0 (TID 1346)
+16/12/12 05:38:53 INFO TaskSetManager: Finished task 17.0 in stage 120.0 (TID 1341) in 4992 ms on localhost (19/70)
+16/12/12 05:38:53 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:738197504+33554432
+16/12/12 05:38:53 INFO Executor: Finished task 19.0 in stage 120.0 (TID 1343). 1305 bytes result sent to driver
+16/12/12 05:38:53 INFO TaskSetManager: Starting task 23.0 in stage 120.0 (TID 1347, localhost, partition 23, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:53 INFO Executor: Running task 23.0 in stage 120.0 (TID 1347)
+16/12/12 05:38:53 INFO TaskSetManager: Finished task 19.0 in stage 120.0 (TID 1343) in 4929 ms on localhost (20/70)
+16/12/12 05:38:53 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:771751936+33554432
+16/12/12 05:38:57 INFO Executor: Finished task 20.0 in stage 120.0 (TID 1344). 1305 bytes result sent to driver
+16/12/12 05:38:57 INFO TaskSetManager: Starting task 24.0 in stage 120.0 (TID 1348, localhost, partition 24, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:57 INFO Executor: Running task 24.0 in stage 120.0 (TID 1348)
+16/12/12 05:38:57 INFO TaskSetManager: Finished task 20.0 in stage 120.0 (TID 1344) in 4857 ms on localhost (21/70)
+16/12/12 05:38:57 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:805306368+33554432
+16/12/12 05:38:57 INFO Executor: Finished task 21.0 in stage 120.0 (TID 1345). 1305 bytes result sent to driver
+16/12/12 05:38:57 INFO TaskSetManager: Starting task 25.0 in stage 120.0 (TID 1349, localhost, partition 25, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:57 INFO Executor: Running task 25.0 in stage 120.0 (TID 1349)
+16/12/12 05:38:57 INFO TaskSetManager: Finished task 21.0 in stage 120.0 (TID 1345) in 4764 ms on localhost (22/70)
+16/12/12 05:38:57 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:838860800+33554432
+16/12/12 05:38:57 INFO Executor: Finished task 22.0 in stage 120.0 (TID 1346). 1305 bytes result sent to driver
+16/12/12 05:38:57 INFO TaskSetManager: Starting task 26.0 in stage 120.0 (TID 1350, localhost, partition 26, PROCESS_LOCAL, 5737 bytes)
+16/12/12 05:38:57 INFO Executor: Running task 26.0 in stage 120.0 (TID 1350)
+16/12/12 05:38:57 INFO TaskSetManager: Finished task 22.0 in stage 120.0 (TID 1346) in 4762 ms on localhost (23/70)
+16/12/12 05:38:57 INFO HadoopRDD: Input split: file:/data/nyc-taxi-data/data/yellow_tripdata_2014-06.csv:872415232+33554432
