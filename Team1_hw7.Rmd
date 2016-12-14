@@ -114,7 +114,7 @@ ggplot(rush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 #### Rush Hour Uber
 
 ```{r}
-ggplot(rush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/20)) +
+ggplot(rush_uber,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
   theme_minimal() +
   xlim(c(-74.259,-73.700)) +
   ylim(c(40.477,40.917)) +

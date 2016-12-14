@@ -112,8 +112,8 @@ rush_green_pickup = green %>%
   rush_summary() %>%
   filter(if_rush_hour == TRUE) %>%
   pickup_raster()
-rush_pickup = rbind(rush_yellow_pickup,rush_green_pickup)
-rush_pickup$group = c(rep("yellow",nrow(rush_yellow_pickup)),rep("green",nrow(rush_green_pickup)))
+rush_pickup = rbind(rush_green_pickup, rush_yellow_pickup)
+rush_pickup$group = c(rep("green",nrow(rush_green_pickup)), rep("yellow",nrow(rush_yellow_pickup)))
 
 ## Plot for rush hour taxi dropoffs
 # Rush hour yellow cab dropoff
@@ -126,8 +126,8 @@ rush_green_dropoff = green %>%
   rush_summary() %>%
   filter(if_rush_hour == TRUE) %>%
   dropoff_raster()
-rush_dropoff = rbind(rush_yellow_dropoff,rush_green_dropoff)
-rush_dropoff$group = c(rep("yellow",nrow(rush_yellow_dropoff)),rep("green",nrow(rush_green_dropoff)))
+rush_dropoff = rbind(rush_green_dropoff, rush_yellow_dropoff)
+rush_dropoff$group = c(rep("green",nrow(rush_green_dropoff)), rep("yellow",nrow(rush_yellow_dropoff)))
 
 ## Non-rush hour taxi pickups
 # Non-rush hour yellow cab pickup
@@ -140,8 +140,8 @@ nonrush_green_pickup = green %>%
   rush_summary() %>%
   filter(if_rush_hour == FALSE) %>%
   pickup_raster()
-non_rush_pickup = rbind(nonrush_yellow_pickup,nonrush_green_pickup)
-non_rush_pickup$group = c(rep("yellow",nrow(nonrush_yellow_pickup)),rep("green",nrow(nonrush_green_pickup)))
+non_rush_pickup = rbind(nonrush_green_pickup, nonrush_yellow_pickup)
+non_rush_pickup$group = c(rep("green",nrow(nonrush_green_pickup)), rep("yellow",nrow(nonrush_yellow_pickup)))
 
 ## Non-rush hour taxi dropoffs
 # Non-rush hour yellow cab dropoff
@@ -154,8 +154,8 @@ nonrush_green_dropoff = green %>%
   rush_summary() %>%
   filter(if_rush_hour == FALSE) %>%
   dropoff_raster()
-nonrush_dropoff = rbind(nonrush_yellow_dropoff,nonrush_green_dropoff)
-nonrush_dropoff$group = c(rep("yellow",nrow(nonrush_yellow_dropoff)),rep("green",nrow(nonrush_green_dropoff)))
+nonrush_dropoff = rbind(nonrush_green_dropoff, nonrush_yellow_dropoff)
+nonrush_dropoff$group = c(rep("green",nrow(nonrush_green_dropoff)), rep("yellow",nrow(nonrush_yellow_dropoff)))
 
 ## Rush hour ubers
 mutate_uber = uber %>% 
