@@ -171,4 +171,4 @@ nonrush_uber = mutate_uber %>%
 
 ## Write the data frames into RData file
 save(pickup,dropoff,uber_pickup,rush_pickup,rush_dropoff,rush_uber,non_rush_pickup,nonrush_dropoff,nonrush_uber,
-     file = "taxi_and_uber.Rdata")
+     file = "taxi_and_uber.RData")
