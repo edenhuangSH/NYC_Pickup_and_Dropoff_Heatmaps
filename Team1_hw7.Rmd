@@ -22,7 +22,7 @@ library(tidyr)
 
 <Write-up>
 ###prepare step
-In this homework, we used 5 packages, which are `sparklyr`, ‘dplyr`, `ggplot` `tidyr` and `lubridate`. 
+In this homework, we used 5 packages, which are `sparklyr`, `dplyr`, `ggplot` `tidyr` and `lubridate`. 
 First, we used `spark_connect` to connect with the Spark. Then we used `spark_read_csv` to read taxi and Uber data. The taxi and Uber data we used is from June 2014. After this we made a function that changes the column names to lower case. 
 ###sparklyr.R file
 ####Task 1
@@ -106,6 +106,9 @@ ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
 ```
 
 ## Task 2
+
+###write up
+
 
 #### Rush Hour Taxi Pickup
 
