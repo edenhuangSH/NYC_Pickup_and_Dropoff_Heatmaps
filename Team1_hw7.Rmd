@@ -21,6 +21,35 @@ library(tidyr)
 ## Task 1
 
 <Write-up>
+#prepare step
+In this homework, we used 5 packages, which are `sparklyr`, ‘dplyr`, `ggplot` `tidyr` and `lubridate`. 
+First, we used `spark_connect` to connect with the Spark. Then we used `spark_read_csv` to read taxi and Uber data. The taxi and Uber data we used is from June 2014. After this we made a function that changes the column names to lower case. 
+##sparklyr.R file
+#Task 1
+We made 3 raster functions (pickup_raster, dropoff_raster and uber_raster) that rounds latitude and longitude to raster. In these functions, we also used filter to limit the latitude from 40.477 to 40.917 and longitude from -74.259 to -73.700 since we only need data in New York city. Additionally, we used `group()` and `count()` to count the frequency(number) of pickups/drop-offs. For `pickup_raster`, we selected pickup latitude and pick up longitude. For `dropoff_raster` we selected drop off longitude and drop off latitude. For `uber_raster`, we selected Lat(latitude) and Lon(longitude).
+
+After clean the data frame, we used `rbind` to combine the pickup data from yellow and green taxis.  We also did the same thing for drop off data. 
+
+#Task 2
+For task2, we made `rush_summary` function which will select the pickup and drop-off time only from 7 am to 10 am (rush hours). Then we use this function on yellow, green cabs. If the rush hour is between 7 am and 10am, we put those data in rush_yellow_pickup and rush_green_pickup data frames. Then, we combined the 2 data frames together as `rush_pickup`. We did the same thing for drop-off data too, and named the data frame as `rush_dropoff`. 
+
+For non-rush hour pick up and drop off data, we filter the data that is not from 7 am to 10am. And `rbind` the ` nonrush_green_dropoff` and `nonrush_yellow_dropoff ` together, named the data frame as ` non_rush_dropoff `. 
+
+For Uber data, we also chose from 7am to 10am as our rush hour data, and other hour data as non-rush hour data. 
+
+Finally, we save all the data frame data in `taxi_and_uber.R` file. 
+
+
+###Rmd file
+In the Rmd file, we load the `slarklyr.R` file first. After this we will have all data frames we need, so we can start plotting the graphs. 
+
+First graph is a plot for pickup. We set x axis as pickup_longitude, and y axis as pickup_latitude. We alpha is set as the log transformed frequency of pickups divided by 20. Also, x axis is from -74.259 to -73.700, and y is from 40.477 to 40.917. The colors of the plots are decided by the cab color. (green color is #009E73, and yellow is #F0E442). Since we plot the green plots first, the yellow plots are covering the green plots. From this graph we notice that yellow cabs’ pick up locations are mostly in Manhattan, Brooklyn and JFK airport, while green cabs’ pick up location are widely spread in the whole city. 
+
+Second graph is a plot for drop off locations. Here the x axis is drop off longitude, and y axis is drop off latitude. We did the same thing as previous graph. In this graph, we found that both drop off locations of yellow and green cabs are widely spread in the whole city. Yellow cabs have higher numbers of drop offs in lower Manhattan and Brooklyn than other part in the city. 
+
+We did the same thing in uber pick up plots too. From the third graph we found that uber pickup locations are mainly in lower Manhattan and Brooklyn. 
+
+
 
 ```{r}
 file = "taxi_and_uber.RData"
