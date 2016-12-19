@@ -38,7 +38,7 @@ load(file = file)
 
 #### Plot for pickup
 
-First graph is a plot for pickup. We set x axis as pickup_longitude, and y axis as pickup_latitude. We alpha is set as the log transformed frequency of pickups divided by 20. Also, x axis is from -74.259 to -73.700, and y is from 40.477 to 40.917. The colors of the points are decided by the cab color. (green color is "#009E73", and yellow is "#F0E442"). Since we plot the green plots first, the yellow plots are covering the green plots. From this graph we notice that yellow cabs’ pick up locations are mostly in Manhattan, Brooklyn and JFK airport, while green cabs’ pick up location are widely spread in the whole city. 
+First graph is a plot for pickup. We set x axis as pickup_longitude, and y axis as pickup_latitude. Our alpha is set as the log transformed frequency of pickups divided by 20. Also, x axis is from -74.259 to -73.700, and y is from 40.477 to 40.917. The colors of the points are decided by the cab color. (green color is "#009E73", and yellow is "#F0E442"). Since we plot the green plots first, the yellow plots are covering the green plots. From this graph we notice that yellow cabs’ pick up locations are mostly in Manhattan, Brooklyn and JFK airport, while green cabs’ pick up location are widely spread in the whole city. 
 
 ```{r}
 ggplot(pickup,aes(x = pickup_longitude,y = pickup_latitude,
@@ -74,7 +74,7 @@ ggplot(dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 
 #### Plot for uber pickups
 
-We did the same thing in uber pick up plots too. The only difference is that there's only one color in the plot. From the third graph we found that uber pickup locations are mainly in lower Manhattan and Brooklyn. 
+We did the same thing in uber pick up plots too. The only difference is that there's only one color in the plot. From the third graph we found that uber pickup locations are mainly in lower Manhattan and Brooklyn. From the above 3 graphs, we can tell that New Yorkers normally take taxis from Manhattan and Brooklyn, and the destinations are widely spread in the whole city.
 
 ```{r}
 ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
@@ -90,17 +90,17 @@ ggplot(uber_pickup,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
 
 ## Task 2
 
-For task2, we made `rush_summary` function which will select the pickup and drop-off time only from 7 am to 10 am (rush hours). Then we use this function on yellow, green cabs. If the rush hour is between 7 am and 10am, we put those data in rush_yellow_pickup and rush_green_pickup data frames. Then, we combined the 2 data frames together as `rush_pickup`. We did the same thing for drop-off data too, and named the data frame as `rush_dropoff`. 
+For task2, we made `rush_summary` function which will select the pickup and drop-off time only from 7 am to 10 am (rush hours). Then we use this function on yellow, green cabs. If the rush hour is between 7 am and 10am, we put those data in rush_yellow_pickup and rush_green_pickup data frames. Then, we combined the 2 data frames together as `rush_pickup`. We did the same thing for drop-off data as well, and named the data frame as `rush_dropoff`. 
 
 For non-rush hour pick up and drop off data, we filter the data that is not from 7 am to 10am. And `rbind` the ` nonrush_green_dropoff` and `nonrush_yellow_dropoff ` together, named the data frame as ` non_rush_dropoff `. 
 
-For Uber data, we also chose from 7am to 10am as our rush hour data, and other hour data as non-rush hour data. 
+For Uber data, we also chose from 7am to 10am as our rush hour data, and others as non-rush hour data. 
 
 Finally, we save all the data frame data in `taxi_and_uber.R` file. 
 
 #### Rush Hour Taxi Pickup
 
-The rush hour pick-up plot looks nice. The yellow cabs solely pick up customers in midtown and downtown Manhattan while the green cabs pick up customers in other areas of NYC.
+The rush hour pick-up plot looks nice. The yellow cabs solely pick up customers in midtown and downtown Manhattan, part of Brooklyn and JFK airport while the green cabs pick up customers in other areas of NYC.
 
 ```{r}
 ggplot(rush_pickup,aes(x = pickup_longitude,y = pickup_latitude,
@@ -119,7 +119,7 @@ ggplot(rush_pickup,aes(x = pickup_longitude,y = pickup_latitude,
 
 #### Rush Hour Taxi Dropoff
 
-For the rush hour drop off plot. I looks like both yellow cabs and green cabs drop people in every part of NYC with most people get off in Manhattan. Since the green points cover the yellow points, we may not clearly see the wide-spreaded drop-off locations for yellow cabs. But we can see imply from the fact that there are more yellow cabs in NYC, so the drop off locations should be wide-spreaded for yellow cabs as well.
+For the rush hour drop off plot, it looks like both yellow cabs and green cabs drop people in every part of NYC with most people get off in Manhattan. Since the yellow points cover the green points, we may not clearly see the wide-spreaded drop-off locations for green cabs. But we can see imply from the fact that there are more yellow cabs in Manhattan and Brroklyn, JFK than other places in NYC.
 
 ```{r}
 ggplot(rush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
@@ -154,7 +154,7 @@ ggplot(rush_uber,aes(x = Lon,y = Lat,alpha = log(n)/20)) +
 
 #### Non-rush Hour Taxi Pickup
 
-For non-rush hour, the yellow cabs pick up customers mostly in Manhattan and JFK airport. Green cabs pick up customers all around the city.
+For non-rush hour, the yellow cabs pick up customers mostly in Manhattan, Brooklyn and JFK airport. Given though some plots of reen cabs are covered by yellow plots, we can tell that the green cabs pick up customers all around the city.
 
 ```{r}
 ggplot(non_rush_pickup,aes(x = pickup_longitude,y = pickup_latitude,
@@ -191,6 +191,8 @@ ggplot(nonrush_dropoff,aes(x = dropoff_longitude,y = dropoff_latitude,
 #### Non-rush Hour Uber
   
 Uber pick up people in Manhattan and Brooklyn mostly during non-rush hours.
+
+From the above 6 graphs, we can tell that New Yorkers in Manhattan, Brooklyn and JFK tend to use cabs, especially yellow cabs more than other parts of NYC. During rush hours, customers pick up cabs more focus on Manhattan and Brooklyn area, while during non rush hours, the cab pickup region is more spread. Generally drop off locations are more widely spread than pick up locations.
   
 ```{r}
 ggplot(nonrush_uber,aes(x = jitter(Lon),y = jitter(Lat),alpha = log(n)/20)) +
