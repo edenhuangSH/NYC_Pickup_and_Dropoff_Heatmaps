@@ -32,6 +32,7 @@ fix_names = function(df)
 green  = green  %>% fix_names()
 yellow = yellow %>% fix_names()
 
+
 ### Task 1
 
 # round lat and long to "raster" 
