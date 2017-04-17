@@ -1,4 +1,3 @@
-# Team1_hw7
 
 Source: http://www2.stat.duke.edu/~cr173/Sta523_Fa16/hw/hw7.html
 
